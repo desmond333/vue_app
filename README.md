@@ -1,1 +1,2 @@
-# vue_app
+# stories_app
+### Vue.js, TypeScript, Quasar, VueX
