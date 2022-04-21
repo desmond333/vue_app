@@ -6,6 +6,7 @@
         >{{ post.body }} {{ post.id }}</q-item-label
       >
     </q-item-section>
+    <q-btn flat dense round icon="menu" @click="deletePost" />
   </q-item>
 </template>
 
@@ -23,7 +24,7 @@ export default defineComponent({
   },
   methods: {
     deletePost() {
-      console.log('fefefe');
+      this.$emit('delete', this.post.id);
     },
   },
 });

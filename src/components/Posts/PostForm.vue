@@ -23,7 +23,7 @@ export default defineComponent({
   data() {
     return {
       post: {
-        id: 0,
+        id: '',
         title: '',
         body: '',
       },
@@ -31,13 +31,13 @@ export default defineComponent({
   },
   methods: {
     createPost() {
-      this.post.id = Date.now()
-      this.$emit('create', this.post)
+      this.post.id = Date.now().toString();
+      this.$emit('create', this.post);
       this.post = {
         ...this.post,
         title: '',
-        body: ''
-      }
+        body: '',
+      };
     },
   },
 });
